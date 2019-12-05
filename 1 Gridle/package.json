@@ -9,9 +9,9 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
+        "bulma": "^0.8.0",
         "coffeekraken-gridle": "^4.0.0-beta.2",
-        "grunt": "^1.0.4",
-        "spectre.css": "^0.5.8"
+        "grunt": "^1.0.4"
     },
     "devDependencies": {
         "grunt-contrib-sass": "^1.0.0",

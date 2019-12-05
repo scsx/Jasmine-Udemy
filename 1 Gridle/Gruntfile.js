@@ -2,6 +2,7 @@
 module.exports = function (grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        // Tasks
         sass: {
             dist: {
                 options: {
@@ -10,52 +11,22 @@ module.exports = function (grunt) {
                 },
                 files: [{
                     expand: true,
-                    cwd: 'css',
-                    src: ['**/*.scss'],
-                    dest: 'css',
+                    cwd: 'src/scss',
+                    src: ['*.scss'],
+                    dest: 'dist/css',
                     ext: '.css'
-                }]
-            }
-        },
-        postcss: { // Begin Post CSS Plugin
-            options: {
-                map: false,
-                processors: [
-                    require('autoprefixer')({
-                        "overrideBrowserslist": [
-                            "defaults"
-                        ]
-                    })
-                ]
-            },
-            dist: {
-                src: 'css/*.css'
-            }
-        },
-        cssmin: { // Begin CSS Minify Plugin
-            target: {
-                files: [{
-                    expand: true,
-                    cwd: 'css',
-                    src: ['*.css', '!*.min.css'],
-                    dest: 'css',
-                    ext: '.min.css'
-                }]
+                }]     
             }
         },
         watch: { // Compile everything into one task with Watch Plugin
             css: {
-                files: 'css/*.scss',
-                tasks: ['sass', 'postcss', 'cssmin']
+                files: '**/*.scss',
+                tasks: ['sass']
             }
         }
     });
-
-    grunt.loadNpmTasks('grunt-contrib-sass')
-    grunt.loadNpmTasks('grunt-postcss')
-    grunt.loadNpmTasks('grunt-contrib-cssmin')
-    grunt.loadNpmTasks('grunt-contrib-uglify')
-    grunt.loadNpmTasks('grunt-contrib-watch')
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-watch');
 
     grunt.registerTask('default', ['watch']);
 };
