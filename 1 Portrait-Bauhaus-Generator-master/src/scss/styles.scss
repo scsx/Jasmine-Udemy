@@ -1,0 +1,26 @@
+@import 'gridle-setup';
+
+$blue: #2f79d5;
+
+html,
+body {
+    background: #f3f3f3;
+}
+
+.box {
+    margin-top: 40px;
+    background: $blue;
+ 
+    @include g-state(medium) {
+        background: lighten($blue, 15%);
+    }
+
+    @include g-state(mf-medium) {
+        background: lighten($blue, 30%);
+    }
+
+    @include g-state(large) {
+        background: lighten($blue, 45%);
+    }
+
+}

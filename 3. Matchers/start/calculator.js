@@ -3,7 +3,7 @@
  * @constructor
  */
 function Calculator() {
-  this.total = 0;
+    this.total = 0;
 }
 
 /**
@@ -13,7 +13,7 @@ function Calculator() {
  * @returns {*}
  */
 Calculator.prototype.add = function (number) {
-  return this.total += number;
+    return this.total += number;
 };
 
 /**
@@ -23,7 +23,7 @@ Calculator.prototype.add = function (number) {
  * @returns {*}
  */
 Calculator.prototype.subtract = function (number) {
-  return this.total -= number;
+    return this.total -= number;
 };
 
 /**
@@ -33,7 +33,7 @@ Calculator.prototype.subtract = function (number) {
  * @returns {*}
  */
 Calculator.prototype.multiply = function (number) {
-  return this.total *= number;
+    return this.total *= number;
 };
 
 /**
@@ -43,9 +43,9 @@ Calculator.prototype.multiply = function (number) {
  * @returns {*}
  */
 Calculator.prototype.divide = function (number) {
-  if (number === 0) {
-    throw new Error('Cannot divide by zero');
-  }
+    if (number === 0) {
+        throw new Error('Cannot divide by zero');
+    }
 
-  return this.total /= number;
+    return this.total /= number;
 };

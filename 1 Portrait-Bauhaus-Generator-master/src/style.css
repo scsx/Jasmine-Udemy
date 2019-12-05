@@ -1,0 +1,55 @@
+a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+
+
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  background: #282828;
+}
+
+#tela {
+    position: relative;
+    width: 80vh;
+    height: 80vh;
+    margin-top: 10vh;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: #fff;
+}
+
+#tela #back {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+#imageholder {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: right bottom;
+}
+
+#divs {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 3;
+}
+
+#divs .rect {
+    position: absolute;
+}
+
+
