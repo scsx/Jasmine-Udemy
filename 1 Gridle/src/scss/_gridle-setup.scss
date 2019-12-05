@@ -1,69 +1,17 @@
 @import '../../node_modules/coffeekraken-gridle/index';
 
 // %% Replicate |3o5e
-
-
-// This JSON is needed if you want to use gridle.js
-/*
-$gridle-generate-json-settings: true;
-
-$mediumMinWidth: 768px !default;
-$exxmediumMinWidth: 1024px !default;
-$largeMinWidth: 1280px !default;
-$gutterWidth: 0 !default;
-
-// setup the grid (required) :
-@include g-setup((context: 12,
-        gutter-width: $gutterWidth,
-        debug: false));
-
-// Hamburger / mobile design
-@include gridle_register_state(small, (min-width: 0,
-        max-width: $mediumMinWidth - 1,
-        gutter-width: $gutterWidth));
-
-// Menu
-@include gridle_register_state(medium, (min-width: $mediumMinWidth,
-        max-width: $largeMinWidth - 1,
-        gutter-width: $gutterWidth));
-
-// Mobile first md
-@include gridle_register_state(mf-medium, (min-width: $mediumMinWidth,
-        gutter-width: $gutterWidth));
-
-// Menu
-@include gridle_register_state(large, (min-width: $largeMinWidth,
-        gutter-width: $gutterWidth));
-
-// Mobile and Tablet
-@include gridle_register_state(ex-medium, (min-width: $mediumMinWidth,
-        max-width: $exxmediumMinWidth - 1,
-        gutter-width: $gutterWidth));
-
-// Desktop
-@include gridle_register_state(exx-medium, (min-width: $exxmediumMinWidth,
-        gutter-width: $gutterWidth));
-
-
-*/
-
-
-
-
-
 $mediumMinWidth: 768px !default;
 $exxmediumMinWidth: 1024px !default;
 $largeMinWidth: 1280px !default;
 $gutterWidth: 0 !default;
 
 // %% Docs example
-@include g-setup((
-	columns: 12,
-	column-width: 60,
-	width: 1200,
-	container-width: 85vw,
-	container-max-width: 1440px
-));
+@include g-setup((columns: 12,
+        column-width: 60,
+        width: 1200,
+        container-width: 85vw,
+        container-max-width: 1440px));
 
 // Hamburger / mobile design
 @include g-register-state(small, (min-width: 0,
@@ -71,17 +19,13 @@ $gutterWidth: 0 !default;
         gutter-width: $gutterWidth));
 
 // Menu
-@include g-register-state(medium, (min-width: $mediumMinWidth,
-        max-width: $largeMinWidth - 1,
-        gutter-width: $gutterWidth));
+@include g-register-state(medium, (min-width: $mediumMinWidth, max-width: $largeMinWidth - 1, gutter-width: $gutterWidth));
 
 // Mobile first md
-@include g-register-state(mf-medium, (min-width: $mediumMinWidth,
-        gutter-width: $gutterWidth));
+@include g-register-state(mf-medium, (min-width: $mediumMinWidth, gutter-width: $gutterWidth));
 
 // Menu
-@include g-register-state(large, (min-width: $largeMinWidth,
-        gutter-width: $gutterWidth));
+@include g-register-state(large, (min-width: $largeMinWidth, gutter-width: $gutterWidth));
 
 // Mobile and Tablet  SIMILAR BREAK IS ALREADY PRESENT
 /*
@@ -93,20 +37,6 @@ $gutterWidth: 0 !default;
 /*
 @include g-register-state(exx-medium, (min-width: $exxmediumMinWidth,
         gutter-width: $gutterWidth));
-*/        
-
-/*
-@include g-register-state(tablet, (
-	min-width : 0px
-));
-@include g-register-state(tablet, (
-	min-width : 768px
-));
-@include g-register-state(desktop, (
-	min-width : 1280px
-));
 */
 
 @include g-classes();
-
-

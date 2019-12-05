@@ -151,48 +151,6 @@
  *
  * @author 		Olivier Bossel <olivier.bossel@gmail.com>
  */
-/*
-$gridle-generate-json-settings: true;
-
-$mediumMinWidth: 768px !default;
-$exxmediumMinWidth: 1024px !default;
-$largeMinWidth: 1280px !default;
-$gutterWidth: 0 !default;
-
-// setup the grid (required) :
-@include g-setup((context: 12,
-        gutter-width: $gutterWidth,
-        debug: false));
-
-// Hamburger / mobile design
-@include gridle_register_state(small, (min-width: 0,
-        max-width: $mediumMinWidth - 1,
-        gutter-width: $gutterWidth));
-
-// Menu
-@include gridle_register_state(medium, (min-width: $mediumMinWidth,
-        max-width: $largeMinWidth - 1,
-        gutter-width: $gutterWidth));
-
-// Mobile first md
-@include gridle_register_state(mf-medium, (min-width: $mediumMinWidth,
-        gutter-width: $gutterWidth));
-
-// Menu
-@include gridle_register_state(large, (min-width: $largeMinWidth,
-        gutter-width: $gutterWidth));
-
-// Mobile and Tablet
-@include gridle_register_state(ex-medium, (min-width: $mediumMinWidth,
-        max-width: $exxmediumMinWidth - 1,
-        gutter-width: $gutterWidth));
-
-// Desktop
-@include gridle_register_state(exx-medium, (min-width: $exxmediumMinWidth,
-        gutter-width: $gutterWidth));
-
-
-*/
 /**
  * @name 	default State
  * Here's the settings for the **default** state.
@@ -286,17 +244,6 @@ $gutterWidth: 0 !default;
 /*
 @include g-register-state(exx-medium, (min-width: $exxmediumMinWidth,
         gutter-width: $gutterWidth));
-*/
-/*
-@include g-register-state(tablet, (
-	min-width : 0px
-));
-@include g-register-state(tablet, (
-	min-width : 768px
-));
-@include g-register-state(desktop, (
-	min-width : 1280px
-));
 */
 /**
  * Container
