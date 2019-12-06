@@ -1,6 +1,7 @@
 @import 'gridle-setup';
 
 $blue: #2f79d5;
+$count : g-states-count(); // 5 // default, small, medium, mf-medium, large
 
 html,
 body {
@@ -23,4 +24,19 @@ body {
         background: lighten($blue, 45%);
     }
 
+}
+
+.gridlecontainer {
+    background: pink;
+
+    #content {
+        border: 1px solid purple;
+    }
+}
+
+$statesNames : g-states-names();
+@each $name in $statesNames {
+	p.test {
+        content: $name;
+    }
 }

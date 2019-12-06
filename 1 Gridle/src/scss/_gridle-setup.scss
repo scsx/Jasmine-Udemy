@@ -14,9 +14,7 @@ $gutterWidth: 0 !default;
         container-max-width: 1440px));
 
 // Hamburger / mobile design
-@include g-register-state(small, (min-width: 0,
-        max-width: $mediumMinWidth - 1,
-        gutter-width: $gutterWidth));
+@include g-register-state(small, (min-width: 0, max-width: $mediumMinWidth - 1, gutter-width: $gutterWidth));
 
 // Menu
 @include g-register-state(medium, (min-width: $mediumMinWidth, max-width: $largeMinWidth - 1, gutter-width: $gutterWidth));
@@ -27,16 +25,6 @@ $gutterWidth: 0 !default;
 // Menu
 @include g-register-state(large, (min-width: $largeMinWidth, gutter-width: $gutterWidth));
 
-// Mobile and Tablet  SIMILAR BREAK IS ALREADY PRESENT
-/*
-@include g-register-state(ex-medium, (min-width: $mediumMinWidth,
-        max-width: $exxmediumMinWidth - 1,
-        gutter-width: $gutterWidth));
-*/
-// Desktop  SIMILAR BREAK IS ALREADY PRESENT
-/*
-@include g-register-state(exx-medium, (min-width: $exxmediumMinWidth,
-        gutter-width: $gutterWidth));
-*/
-
 @include g-classes();
+
+

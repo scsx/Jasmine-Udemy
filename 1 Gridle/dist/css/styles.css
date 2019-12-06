@@ -236,15 +236,6 @@
  * @gridle-container-width    85vw
  * @gridle-container-max-width    1440px
  */
-/*
-@include g-register-state(ex-medium, (min-width: $mediumMinWidth,
-        max-width: $exxmediumMinWidth - 1,
-        gutter-width: $gutterWidth));
-*/
-/*
-@include g-register-state(exx-medium, (min-width: $exxmediumMinWidth,
-        gutter-width: $gutterWidth));
-*/
 /**
  * Container
  */
@@ -2971,6 +2962,33 @@ body {
   .box {
     background: #eef4fc;
   }
+}
+
+.gridlecontainer {
+  background: pink;
+}
+.gridlecontainer #content {
+  border: 1px solid purple;
+}
+
+p.test {
+  content: default;
+}
+
+p.test {
+  content: small;
+}
+
+p.test {
+  content: medium;
+}
+
+p.test {
+  content: mf-medium;
+}
+
+p.test {
+  content: large;
 }
 
 /*# sourceMappingURL=styles.css.map */
