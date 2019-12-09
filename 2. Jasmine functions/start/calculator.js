@@ -10,42 +10,41 @@ function Calculator() {
  * Adds value to current total.
  *
  * @param {number} number
- * @returns {*}
+ * @returns {number}
  */
 Calculator.prototype.add = function (number) {
     return this.total += number;
-};
+}
 
 /**
  * Subtracts number from current total.
  *
  * @param {number} number
- * @returns {*}
+ * @returns {number}
  */
 Calculator.prototype.subtract = function (number) {
     return this.total -= number;
-};
+}
 
 /**
  * Multiplies value to current total.
  *
  * @param {number} number
- * @returns {*}
+ * @returns {number}
  */
 Calculator.prototype.multiply = function (number) {
     return this.total *= number;
-};
+}
 
 /**
  * Divides value to current total.
  *
  * @param {number} number
- * @returns {*}
+ * @returns {number}
  */
 Calculator.prototype.divide = function (number) {
     if (number === 0) {
         throw new Error('Cannot divide by zero');
     }
-
     return this.total /= number;
-};
+}

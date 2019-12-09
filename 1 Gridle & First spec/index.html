@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Gridle Gridle!</title>
+    <title>Gridle & Jasmine!</title>
     <link href="node_modules/bulma/css/bulma.min.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/png" href="node_modules/jasmine-core/images/jasmine_favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="node_modules/jasmine-core/lib/jasmine-core/jasmine.css">
     <link href="dist/css/styles.css" rel="stylesheet" />
 </head>
 
@@ -62,8 +65,19 @@
         </div>
 
         <p class="test"></p>
+        <p class="attr" title="I'm attr title"></p>
 
     </div>
+
+    <script type="text/javascript" src="node_modules/jasmine-core/lib/jasmine-core/jasmine.js"></script>
+    <script type="text/javascript" src="node_modules/jasmine-core/lib/jasmine-core/jasmine-html.js"></script>
+    <script type="text/javascript" src="node_modules/jasmine-core/lib/jasmine-core/boot.js"></script>
+
+    <script type="text/javascript">
+        it('Should have the correct title', function() {
+            expect(document.title).toBe('Gridle & Jasmine!');
+        });
+    </script>
 </body>
 
 </html>

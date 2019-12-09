@@ -40,3 +40,12 @@ $statesNames : g-states-names();
         content: $name;
     }
 }
+
+p.attr::before {
+    content: attr(title);
+}
+
+// JASMINE
+.jasmine_html-reporter {
+    padding: 40px 20px;
+}

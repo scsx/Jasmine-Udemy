@@ -2991,4 +2991,12 @@ p.test {
   content: large;
 }
 
+p.attr::before {
+  content: attr(title);
+}
+
+.jasmine_html-reporter {
+  padding: 40px 20px;
+}
+
 /*# sourceMappingURL=styles.css.map */

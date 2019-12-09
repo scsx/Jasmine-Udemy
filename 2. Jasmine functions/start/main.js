@@ -2,10 +2,12 @@
  * Calculates result for a simple mathematical expression.
  *
  * @param {string} inputValue
+ * @returns {undefined}
  */
 function calculate(inputValue) {
     const expression = /\+|\-|\*|\//;
     const numbers = inputValue.split(expression);
+    //debugger;
 
     const numberA = parseInt(numbers[0]);
     const numberB = parseInt(numbers[1]);
@@ -44,6 +46,7 @@ function calculate(inputValue) {
 /**
  * Updates result in DOM element.
  * @param {string} result
+ * @returns {undefined}
  */
 function updateResult(result) {
     const element = document.getElementById('result');
