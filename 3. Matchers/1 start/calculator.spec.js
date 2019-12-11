@@ -109,12 +109,16 @@ describe('calculator.js', function () {
     });
 
     // custom matcher
-    
     it('shows custom matcher', function () {
+
         jasmine.addMatchers(customMatchers);
         const calculator = new Calculator();
 
         expect(calculator).toBeCalculator(); // custom
     });
+
+    // third party
+    // missing, version issues
+    // https://www.udemy.com/course/unit-testing-your-javascript-with-jasmine/learn/lecture/10595214
 
 });
