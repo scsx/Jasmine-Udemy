@@ -1,6 +1,7 @@
 // ALL THESE SPECS PASS
 
 describe('calculator.js', function () {
+
     it('should add numbers to total', function () {
         const calculator = new Calculator();
         calculator.add(5);
