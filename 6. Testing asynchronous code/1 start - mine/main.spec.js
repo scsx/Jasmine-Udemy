@@ -143,17 +143,19 @@ describe('main.js', function () {
         });
     });
 
-    xdescribe('showVersion()', function () {
+    describe('showVersion()', function () {
         it('calls calculator.version', function () {
             spyOn(document, 'getElementById').and.returnValue({
                 innerText: null
             });
-
-            const spy = spyOnProperty(Calculator.prototype, 'version', 'get');
+            const spy = spyOnProperty(Calculator.prototype, 'version', 'get').and.returnValue(
+                Promise.resolve()
+            );
 
             showVersion();
-
             expect(spy).toHaveBeenCalled();
+
         });
     });
+   
 });

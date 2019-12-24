@@ -117,15 +117,21 @@ describe('calculator.js', function () {
         describe('get version (Promise)', function () {
             // because this is async we need a done callback
             it('fetches version from external source', function (doneOrOtherName) {
+                
+                // spyOn to create a mock response so the test passes even if the file is not available
+                /*
+                spyOn(window, 'fetch').and.returnValue(Promise.resolve(
+                    new Response('{ "version": "0.1" }')
+                ));
+                */
                 calculator.version.then(function(version) {
                     // expectation has to be inside so it has access to the Promise's info
                     expect(version).toBe('0.1');
-
                     // now we can call it
                     doneOrOtherName();
                 });
             });
         });
-        
+
     });
 });
