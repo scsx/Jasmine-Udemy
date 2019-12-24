@@ -4,39 +4,39 @@
  * @param {string} inputValue
  */
 function calculate(inputValue) {
-  const expression = /\+|\-|\*|\//;
-  const numbers = inputValue.split(expression);
+    const expression = /\+|\-|\*|\//;
+    const numbers = inputValue.split(expression);
 
-  const numberA = parseInt(numbers[0]);
-  const numberB = parseInt(numbers[1]);
+    const numberA = parseInt(numbers[0]);
+    const numberB = parseInt(numbers[1]);
 
-  const operation = inputValue.match(expression);
+    const operation = inputValue.match(expression);
 
-  if (Number.isNaN(numberA) || Number.isNaN(numberB) || operation === null) {
-    updateResult('Expression not recognized');
-    return;
-  }
+    if (Number.isNaN(numberA) || Number.isNaN(numberB) || operation === null) {
+        updateResult('Expression not recognized');
+        return;
+    }
 
-  const calculator = new Calculator();
-  calculator.add(numberA);
+    const calculator = new Calculator();
+    calculator.add(numberA);
 
-  let result;
-  switch (operation[0]) {
-    case '+':
-      result = calculator.add(numberB);
-      break;
-    case '-':
-      result = calculator.subtract(numberB);
-      break;
-    case '*':
-      result = calculator.multiply(numberB);
-      break;
-    case '/':
-      result = calculator.divide(numberB);
-      break;
-  }
+    let result;
+    switch (operation[0]) {
+        case '+':
+            result = calculator.add(numberB);
+            break;
+        case '-':
+            result = calculator.subtract(numberB);
+            break;
+        case '*':
+            result = calculator.multiply(numberB);
+            break;
+        case '/':
+            result = calculator.divide(numberB);
+            break;
+    }
 
-  updateResult(result);
+    updateResult(result);
 }
 
 /**
@@ -44,25 +44,40 @@ function calculate(inputValue) {
  * @param {string} result
  */
 function updateResult(result) {
-  const element = document.getElementById('result');
+    const element = document.getElementById('result');
 
-  if (element) {
-    element.innerText = result;
-  }
+    if (element) {
+        element.innerText = result;
+    }
 }
 
 /**
+ * Get version without promise, from previous section.
+ * Shows calculator version in DOM.
+ */
+/*
+function showVersion() {
+    const calculator = new Calculator();
+
+    const element = document.getElementById('version');
+
+    element.innerText = calculator.version;
+}
+*/
+
+/**
+ * Get version with promise
  * Shows calculator version in DOM.
  */
 function showVersion() {
-  const calculator = new Calculator();
-  const element = document.getElementById('version');
+    const calculator = new Calculator();
 
-  calculator.version
-    .then(function (version) {
-      element.innerText = version;
+    const element = document.getElementById('version');
+
+    calculator.version.then(function(v) {
+        element.innerText = v;
     })
-    .catch(function() {
-      element.innerText = 'unknown';
-    });
+    .catch(function(error) {
+        element.innerText = 'unknwon';
+    })
 }
