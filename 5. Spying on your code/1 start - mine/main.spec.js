@@ -131,4 +131,20 @@ describe('main.js', function () {
             expect(this.element.innerText).toBe('5');
         });
     });
+
+    describe('showVersion()', function () {
+        it('calls calculator.version', function() {
+            // this way we get a mock element to test (like the span on the real code)
+            spyOn(document, 'getElementById').and.returnValue({
+                innerText: null
+            });
+            // spy on property (getter)
+            const spy = spyOnProperty(Calculator.prototype, 'version', 'get'); // get is default
+
+            showVersion();
+            // instead of spy we could have passed: Object.getOwnPropertyDescriptor(Calculator.prototype, 'version').get
+            expect(spy).toHaveBeenCalled();
+        });
+    });
+
 });
